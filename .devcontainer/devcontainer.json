@@ -1,20 +1,13 @@
 {
     "name": "Simple React App",
-    "dockerFile": "Dockerfile",
-  
-    "customizations": {
-      "vscode": {
-        "settings": {
-          "terminal.integrated.defaultProfile.linux": "bash"
-        },
-  
-        "extensions": ["dbaeumer.vscode-eslint"]
-      }
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+                "NODE_VERSION": "14"
+        }
     },
   
-    "forwardPorts": [3000],
+    "extensions": ["dbaeumer.vscode-eslint"],
   
-    "postCreateCommand": "npm install",
-  
-    "remoteUser": "node"
+    "forwardPorts": [4200]
   }
